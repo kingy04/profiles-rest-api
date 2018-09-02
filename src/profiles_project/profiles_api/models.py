@@ -31,7 +31,7 @@ class UserProfileManager(BaseUserManager):
         user.save(using=self._db)
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
-    """ Represnts a "user profile" inout our system. """
+    """ Represnts a "user profile" in our system. """
 
     email = models.EmailField(max_length=255, unique=True)
     first_name = models.CharField(max_length=255)
