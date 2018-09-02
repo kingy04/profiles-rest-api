@@ -26,7 +26,7 @@ class UserProfileManager(BaseUserManager):
         user = self.create_user(email, first_name, last_name, password)
 
         user.is_superuser = True
-        user.is_system = True
+        user.is_staff = True
         
         user.save(using=self._db)
 
@@ -37,7 +37,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
-    is_system = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
 
     objects = UserProfileManager()
 
