@@ -4,4 +4,6 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
 COPY . /code/
-RUN pip install -r requirements.txt
+
+RUN pip install -U pip pipenv
+RUN pipenv install --system --deploy --verbose
