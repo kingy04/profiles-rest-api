@@ -7,6 +7,8 @@ name = "pypi"
 Django = "*"
 djangorestframework = "*"
 pytz = "*"
+flake8 = "*"
+isort = "*"
 
 [dev-packages]
 
