@@ -9,6 +9,7 @@ djangorestframework = "*"
 pytz = "*"
 flake8 = "*"
 isort = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
